@@ -162,7 +162,6 @@ export function Tabla() {
                                                     <div className="celda bg-warning bg-gradient border-dark">x</div>
                                                     <div className="celda bg-warning border-secondary">x</div>
                                                 </div>
-                                                {/* Repite para piezas adicionales */}
                                             </div>
                                         </div>
                                     </div>
