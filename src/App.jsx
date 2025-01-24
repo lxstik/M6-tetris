@@ -28,13 +28,13 @@ export default function App() {
                                 <Link className="nav-link" to="/">Inicio</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/juego">Juego</Link>
+                                <Link className="nav-link" to="/Juego">Juego</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/partidas">Partidas</Link>
+                                <Link className="nav-link" to="/Partidas">Partidas</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/ranking">Ranking</Link>
+                                <Link className="nav-link" to="/Ranking">Ranking</Link>
                             </li>
                         </ul>
                     </div>
