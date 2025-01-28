@@ -1,7 +1,7 @@
 import React from 'react';
 import fondo from '../imgs/fondo.jpg';
 import logo from '../imgs/logo.png';
-import modelos from '../lib/modelos.js';
+import panel from '../lib/panel.jsx';
 
 export default function Juego() {
     return (
@@ -32,7 +32,7 @@ export default function Juego() {
             >
                 <img src={logo} alt="Logo" style={{ marginBottom: '20px' }} />
                 <div className='campo' style={{ padding: '10px' }}>
-                    {modelos.matriz.map((item, fila) => (
+                    {panel.matriz.map((item, fila) => (
                         <div style={{ display: 'flex' }} key={fila}>
                             {item.map((elemento, columna) => (
                                 <p
