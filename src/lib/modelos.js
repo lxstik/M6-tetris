@@ -1,5 +1,4 @@
-
-modelos = {
+const modelos = {
     matriz: [
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -25,7 +24,6 @@ modelos = {
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ],
     piezas: [
-
         {
             nombre: "Ele",
             matriz: [
@@ -122,3 +120,5 @@ modelos = {
 
     ]
 }
+
+export default modelos;
