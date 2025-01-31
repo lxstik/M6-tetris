@@ -1,7 +1,9 @@
 import React from 'react';
 import fondo from '../imgs/fondo.jpg';
 import logo from '../imgs/logo.png';
-import panel from '../lib/panel.jsx';
+import Panel from '../lib/panel.jsx';
+import modelos from '../lib/modelos';
+import ModeloPieza from '../lib/panel.jsx';
 
 export default function Juego() {
     return (
@@ -11,7 +13,7 @@ export default function Juego() {
                     body {
                         margin: 0;
                         padding: 0;
-                        overflow: hidden;
+                        // overflow: hidden;
                     }
                 `}
             </style>
@@ -31,30 +33,26 @@ export default function Juego() {
                 }}
             >
                 <img src={logo} alt="Logo" style={{ marginBottom: '20px' }} />
-                <div className='campo' style={{ padding: '10px' }}>
-                    {panel.matriz.map((item, fila) => (
-                        <div style={{ display: 'flex' }} key={fila}>
-                            {item.map((elemento, columna) => (
-                                <p
-                                    key={columna}
-                                    style={{
-                                        margin: '0',
-                                        padding: '0',
-                                        border: '1px solid #ccc',
-                                        width: '25px',
-                                        height: '25px',
-                                        textAlign: 'center',
-                                        lineHeight: '25px',
-                                        backgroundColor: elemento === 1 ? '#333' : 'white',
-                                        color: elemento === 1 ? 'white' : 'black',
-                                    }}
-                                >
-                                    {elemento}
-                                </p>
-                            ))}
-                        </div>
-                    ))}
+                <Panel modelo={modelos.matriz} />
+                <div className='row'>
+                    <div className='col'>
+                        <ModeloPieza modelo={modelos.piezas[0].matriz[0]} />
+                    </div>
+                    <div className="col">
+                        <ModeloPieza modelo={modelos.piezas[0].matriz[1]} />
+                    </div>
+                    <div className="col">
+                        <ModeloPieza modelo={modelos.piezas[0].matriz[2]} />
+                    </div>
+                    <div className="col">
+                        <ModeloPieza modelo={modelos.piezas[0].matriz[3]} />
+                    </div>
                 </div>
+                
+                
+                
+                
+                
             </div>
         </>
     );

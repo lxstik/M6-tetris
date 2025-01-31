@@ -1,100 +1,27 @@
-const pieza = {
-    piezas: [
-        {
-            nombre: "Ele",
-            matriz: [
-                [
-                    [2, 0],
-                    [2, 0],
-                    [2, 2],
-                ],
-                [
-                    [2, 2, 2],
-                    [2, 0, 0],
-                ],
-                [
-                    [2, 2],
-                    [0, 2],
-                    [0, 2],
-                ],
-                [
-                    [0, 0, 2],
-                    [2, 2, 2],
-                ],
-            ]
-        },
-        {
-            nombre: "Palo",
-            matriz: [
-                [
-                    [3],
-                    [3],
-                    [3],
-                    [3],
-                ],
-                [
-                    [3, 3, 3, 3],
-                ],
-            ]
-        },
-        {
-            nombre: "cubo",
-            matriz: [
-                [
-                    [4, 4],
-                    [4, 4],
-                ],
-            ]
-        },
-        {
-            nombre: "z",
-            matriz: [
-                [
-                    [5, 5, 0],
-                    [0, 5, 5],
-                ],
-                [
-                    [0, 5],
-                    [5, 5],
-                    [5, 0],
-                ],
-            ],
-            nombre: "z-inversa",
-            matriz: [
-                [
-                    [0, 6, 6],
-                    [6, 6, 0],
-                ],
-                [
-                    [6, 0],
-                    [6, 6],
-                    [0, 6],
-                ],
-            ],
-            nombre: "T",
-            matriz: [
-                [
-                    [0, 7, 0],
-                    [7, 7, 7],
-                ],
-                [
-                    [7, 0],
-                    [7, 7],
-                    [7, 0],
-                ],
-                [
-                    [7, 7, 7],
-                    [0, 7, 0],
-                ],
-                [
-                    [0, 7],
-                    [7, 7],
-                    [0, 7],
-                ],
-            ]
-        },
+import React from 'react';
 
-    ]
+export default function ModeloPieza({ modelo }) {
+    return (
+        <div className='figura' style={{ padding: '10px' }}>
+            {modelo.map((fila, i) => (
+                <div style={{ display: 'flex' }}>
+                    {fila.map((cuadrado, y) => (
+                        <div
+                            style={{
+                                margin: '0',
+                                padding: '0',
+                                border: '1px solid #ccc',
+                                width: '25px',
+                                height: '25px',
+                                textAlign: 'center',
+                                lineHeight: '25px',
+                            }}
+                        >
+                            {cuadrado}
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </div>
+    );
 }
-
-export default pieza;
