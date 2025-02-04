@@ -67,6 +67,52 @@ button:focus-visible {
   }
 }
 
+.cuadradito{
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+}
 
+.color0{
+  background-color: white;
+  color: black;
+}
 
+.color1{
+  background-color: #333;
+  color: white;
+}
 
+.color2{
+  background-color: blue;
+  color: white;
+}
+
+.color3{
+  background-color: green;
+  color: white;
+}
+
+.color4{
+  background-color: red;
+  color: white;
+}
+
+.color5{
+  background-color: yellow;
+  color: black;
+}
+
+.color6{
+  background-color: purple;
+  color: white;
+}
+
+.color7{
+  background-color: orange;
+  color: white;
+}
