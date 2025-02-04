@@ -1,7 +1,7 @@
 import React from 'react';
 import colorPieza from './functions';
 
-export default function ModeloPieza({ modelo }) {
+export default function Modelo({ modelo }) {
     return (
         <div className='figura' style={{ padding: '10px' }}>
             {modelo.map((fila, i) => (
