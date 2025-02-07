@@ -1,11 +1,18 @@
-import modeloPieza from "./modeloPieza"
+import modeloPieza from "./modeloPieza";
 
-export default function nuevaPieza() {
+export default function nuevaPieza(fila, columna) {
+    const pieza = new modeloPieza();
+    pieza.fila = fila;
+    pieza.columna = columna;
+    
 
-    console.log(modeloPieza.numero) // 1 (un numero aleatorio, en este caso corresponde a la segunda pieza de modelos.piezas)
-    console.log(modeloPieza.nombre) // "L"
-    console.log(modeloPieza.angulo) // 0
-    console.log(modeloPieza.fila, modeloPieza.columna) // 0,1
-    console.log(modeloPieza.matriz)  // [[2,0],[2,0],[2,2]]
-    console.log(modeloPieza.girar()) // [[2,2,2],[2,0,0]]
+    console.log(pieza.numero);
+    console.log(pieza.nombre);
+    console.log(pieza.angulo);
+    console.log(pieza.matriz);
+    pieza.girar();
+    console.log(pieza.angulo);
+    console.log(pieza.matriz);
+
+    return pieza;
 }

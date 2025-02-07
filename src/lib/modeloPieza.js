@@ -1,14 +1,10 @@
+import modelos from "./modelos";
+
 class modeloPieza {
-    numero = 1;
-    nombre = "L";
+    numero = Math.floor(Math.random() * 6);
+    nombre = modelos.piezas[this.numero].nombre;
     angulo = 0;
-    matriz = [[2,0],[2,0],[2,2]];
-    constructor(numero, nombre, angulo = 0, matriz){
-        this.numero = numero;
-        this.nombre = nombre;
-        this.angulo = angulo;
-        this.matriz = matriz;
-    }
+    matriz = modelos.piezas[this.numero].matriz[this.angulo];
 
     girar() {
         if (this.angulo < 3) {
@@ -16,6 +12,7 @@ class modeloPieza {
         } else {
             this.angulo = 0;
         }
+        this.matriz = modelos.piezas[this.numero].matriz[this.angulo];
     }
 }
 

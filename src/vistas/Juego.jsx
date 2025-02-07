@@ -5,8 +5,18 @@ import logo from '../imgs/logo.png';
 import Panel from '../lib/panel.jsx';
 import modelos from '../lib/modelos';
 import Modelo from '../lib/panel.jsx';
+import nuevaPieza from '../lib/nuevaPieza.js';
 
 export default function Juego() {
+    const [piezaActual, setPiezaActual] = useState(null);
+
+    useEffect(() => {
+        const columnaAleatoria = Math.floor(Math.random() * 12);
+        const nueva = nuevaPieza(0, columnaAleatoria);
+        setPiezaActual(nueva);
+    }, []);
+    
+    nuevaPieza(); 
     return (
         <>
             <style>
@@ -59,9 +69,7 @@ export default function Juego() {
                     
                 </div>
                 
-                
-                
-                
+                <button className='btn btn-primary' style={{ marginTop: '20px' }}>Insertar Pieza</button>
                 
             </div>
         </>
