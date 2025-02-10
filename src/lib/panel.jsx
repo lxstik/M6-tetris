@@ -1,14 +1,14 @@
 import React from 'react';
-import colorPieza from './functions';
+import { colorPieza } from './functions';
 import '../index.css';
 
-export default function Panel({ modelo }){
+export default function Panel({ modelo }) {
     return (
         <div className='campo' style={{ padding: '10px' }}>
             {modelo.map((fila, i) => (
-                <div style={{ display: 'flex' }}>
+                <div key={i} style={{ display: 'flex' }}>
                     {fila.map((numero, y) => (
-                        <div className={`casilla ${colorPieza(numero)}`}>
+                        <div key={y} className={`casilla ${colorPieza(numero)}`}>
                             {numero}
                         </div>
                     ))}
@@ -16,4 +16,4 @@ export default function Panel({ modelo }){
             ))}
         </div>
     );
-};
+}

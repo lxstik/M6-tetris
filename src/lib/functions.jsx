@@ -1,6 +1,6 @@
-import Modelo from "./pieza";
+import modelos from './modelos';
 
-export default function colorPieza(numero) {
+export function colorPieza(numero) {
     const colores = [
         'cuadradito color0', 
         'cuadradito color1', 
@@ -11,13 +11,28 @@ export default function colorPieza(numero) {
         'cuadradito color6', 
         'cuadradito color7'
     ];
-    return(colores[numero]);
+    return colores[numero];
 }
 
-export default function pintarPieza(){
-    
+export function pintarPieza(panel, piezaActual) {
+    if (!piezaActual) return panel;
+
+    const nuevoPanel = panel.map(fila => fila.slice());
+    const { matriz, fila, columna } = piezaActual;
+
+    matriz.forEach((filaPieza, i) => {
+        filaPieza.forEach((valor, j) => {
+            const nuevaFila = fila + i;
+            const nuevaColumna = columna + j;
+            if (nuevaFila >= 0 && nuevaFila < nuevoPanel.length && nuevaColumna >= 0 && nuevaColumna < nuevoPanel[0].length) {
+                nuevoPanel[nuevaFila][nuevaColumna] = valor;
+            }
+        });
+    });
+
+    return nuevoPanel;
 }
 
-export default function insertarNuevaPieza() {
-
+export function insertarNuevaPieza(panel, nuevaPieza) {
+    return pintarPieza(panel, nuevaPieza);
 }
